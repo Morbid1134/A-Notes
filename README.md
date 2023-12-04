@@ -12,7 +12,7 @@
 
 ## USB Cables
 
-![](img/usb_speeds.jpg)
+![](usb_speeds.jpg)
 <details>
     <summary>Click to show/hide image and table</summary>
     <table>
@@ -99,9 +99,9 @@
 </details>
 </br>
 
-![](img/usb_length_limitations.jpg)
+![](usb_length_limitations.jpg)
 
-![](img/usbs.jpg)
+![](usbs.jpg)
 
 
 ## Video Cables
@@ -116,7 +116,7 @@
  - **Category 1 (Standard)** -> Used for video content (1080P/60Hertz)
  - **Category 2 (High Speed)** -> Has great length of distance and high resolution (18Gbps-48Gbps)
 
-![](img/HDMI.jpg)
+![](HDMI.jpg)
 
 ### DP (DisplayPort)
 
@@ -183,10 +183,10 @@ Uses IDE cables and connectors and standards but is differentiated from SATA
 
 - Doesn't provide power
 - *Pin ribbon cable* (Parallel) -> Supports up to two devices and can communicate at the same time 
-![](img/IDE-PATA.jpg)
+![](IDE-PATA.jpg)
 
 - **MOLEX Power Connector** -> A 4-pin connector attached directly from the power supply to a device
-![](img/MOLEX.jpg)
+![](MOLEX.jpg)
 
 ### SCSI (Small Computer Systems Interface)
 Legacy parallel bus connector that allows multiple devices to be daisy chained together (it's slow)
@@ -261,79 +261,79 @@ A *multi-socket* can have multiple CPUs or processors installed on the motherboa
 > Understand that some computers have these capabilities providing better performance than those that do not.
 
 ### Motherboard Connectors
-> ![](img/motherboard.jpg)
+> ![](motherboard.jpg)
 
 
 #### CPU Socket
-> ![](img/CPU-socket.jpg)
+> ![](CPU-socket.jpg)
 
 #### Memory Sockets
-> ![](img/RAM-sockets.jpg)
+> ![](RAM-sockets.jpg)
 
 #### Main Power 
-> ![](img/mainpower-socket.jpg)
+> ![](mainpower-socket.jpg)
 
 #### CPU Power
-> ![](img/CPU-power-socket.jpg)
+> ![](CPU-power-socket.jpg)
 
 #### Case Fan Power
-> ![](img/Case-Fan-Power-Sockets.jpg)
+> ![](Case-Fan-Power-Sockets.jpg)
 
 #### USB Header Port
-> ![](img/USB-Header-Port-Socket.jpg)
-> ![](img/USB-Header-Port-Socket1.jpg)
+> ![](USB-Header-Port-Socket.jpg)
+> ![](USB-Header-Port-Socket1.jpg)
 
 #### Power LED Connector
-> ![](img/Power-LED-Connector.jpg)
+> ![](Power-LED-Connector.jpg)
 
 #### Audio Header Port
-> ![](img/Audio-Header.jpg)
+> ![](Audio-Header.jpg)
 
 #### PCIe x1 (expansion slot)
-> ![](img/PCIe-x1.jpg)
+> ![](PCIe-x1.jpg)
 
 #### PCIe x16 (expansion slot)
-> ![](img/PCIe-x16.jpg)
+> ![](PCIe-x16.jpg)
 
 #### M.2 Connector
-> ![](img/M.2-Connector.jpg)
-> ![](img/Shielded-M.2.jpg)
+> ![](M.2-Connector.jpg)
+> ![](Shielded-M.2.jpg)
 
 #### CMOS Batter
-> ![](img/CMOS-Battery.jpg)
+> ![](CMOS-Battery.jpg)
 
 #### SATA Ports
-> ![](img/SATA-Ports-Top.jpg)
-> ![](img/SATA-Ports-Angled.jpg)
+> ![](SATA-Ports-Top.jpg)
+> ![](SATA-Ports-Angled.jpg)
 
 #### Rear Port Cluster
-> ![](img/Ports-Side.jpg)
-> ![](img/Ports-Angled.jpg)
+> ![](Ports-Side.jpg)
+> ![](Ports-Angled.jpg)
 
 #### USB 2.0
-> ![](img/USB-2.0-slots.jpg)
+> ![](USB-2.0-slots.jpg)
 
 #### PS2 Keyboard/Mouse Port
-> ![](img/PS2-Connector.jpg)
+> ![](PS2-Connector.jpg)
 
 #### HDMI and DP
-> ![](img/Integrated-Graphics-Ports.jpg)
+> ![](Integrated-Graphics-Ports.jpg)
 
 #### SuperSpeed USB 3 / USB 3 10Gbps 
-> ![](img/USB-3.0.jpg)
-> ![](img/USB-3-10G.jpg)
+> ![](USB-3.0.jpg)
+> ![](USB-3-10G.jpg)
 
 #### RJ45 Network Jack (2.5Gbps)
-> ![](img/RJ45-Network-Jack.jpg)
+> ![](RJ45-Network-Jack.jpg)
 
 #### SuperSpeed USB 3 Type C (10Gbps)
-> ![](img/SuperSpeed-USB-C.jpg)
+> ![](SuperSpeed-USB-C.jpg)
 
 #### WiFi 6 Antenni Connectors
-> ![](/img/Wifi-6-Antenni.jpg)
+> ![](/Wifi-6-Antenni.jpg)
 
 #### Audio Cluster
-> ![](/img/Audio-Cluster.jpg)
+> ![](/Audio-Cluster.jpg)
 
 ### Installing a Motherboard
 
@@ -385,7 +385,7 @@ If the motherboard has 24 lanes and you are using 2 PCIe x16 GPUs, the 32 lanes 
   - WiFi capability
 - **Riser Card** -> Special type of expansion card on a motherboard
   - A smaller pc may not fit a full graphics card so a Riser card moves the PCIe slots to be parallel to the motherboard
-    ![](/img/Riser.jpg)
+    ![](/Riser.jpg)
 
 ## Cooling and Power
 
@@ -407,8 +407,8 @@ If the motherboard has 24 lanes and you are using 2 PCIe x16 GPUs, the 32 lanes 
 - **Open loop system** -> Liquid cooling based system of different components
 - **Water** and **liquids** are more effective coolants than air convection
 
-![](/img/water-cooled-diagram.jpg)
-![](/img/example-water-cooling.jpg)
+![](/water-cooled-diagram.jpg)
+![](/example-water-cooling.jpg)
 
 
 ### PSU (Power Supply Unit)
