@@ -456,8 +456,8 @@ If the motherboard has 24 lanes and you are using 2 PCIe x16 GPUs, the 32 lanes 
 - Disk Cache -> Pulls the files from the disc into memory and replaces the old file
 
 ### Addressing Memory -> Processor reaching the files inside RAM
-    - **32-bit (x86)** -> 4 billion address location (4GB of data)
-    - **64-bit (x64)** -> 184 quintillion address locations (16EB of data)
+- **32-bit (x86)** -> 4 billion address location (4GB of data)
+- **64-bit (x64)** -> 184 quintillion address locations (16EB of data)
 
 ### Memory Modules
 - Single Bank -> Can put any size module in any slot
