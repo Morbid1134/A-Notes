@@ -8,7 +8,7 @@
 3. Test the theory to determine the cause
 4. Establish a plan of action to resolve the problem and implement a solution
 5. Verify full system functionality (if applicable, implement preventative measures)
-6. Document the findings, actions, and outcomes.+
+6. Document the findings, actions, and outcomes.
 
 ## USB Cables
 
@@ -249,10 +249,10 @@ A *multi-socket* can have multiple CPUs or processors installed on the motherboa
 - **SMT (Simultaneous MultiThreading; generic term)/Hyper-Threading (Intel)** -> Single stream of instructions is being sent by a software application to a processor
 - **SMP (Symmetric Multiprocessing)** -> Traditional workstation and servers have multiple processors
 - **Multi-core Processors** -> Single CPU with muliple processors inside
-  - Dual-core -> two CPUs inside a single chip
-  - Quad-core -> Four CPUs inside a single chip
-  - Hexa-core -> Six CPUs inside a single chip
-  - Octa-core -> Eight CPUs inside a single chip
+  - **Dual-core** -> two CPUs inside a single chip
+  - **Quad-core** -> Four CPUs inside a single chip
+  - **Hexa-core** -> Six CPUs inside a single chip
+  - **Octa-core** -> Eight CPUs inside a single chip
 - **Virtualization** -> Pretend there are other computers inside itself
   - VT (Intel)
   - AMD-V (AMD)
@@ -330,10 +330,10 @@ A *multi-socket* can have multiple CPUs or processors installed on the motherboa
 > ![](SuperSpeed-USB-C.jpg)
 
 #### WiFi 6 Antenni Connectors
-> ![](/Wifi-6-Antenni.jpg)
+> ![](Wifi-6-Antenni.jpg)
 
 #### Audio Cluster
-> ![](/Audio-Cluster.jpg)
+> ![](Audio-Cluster.jpg)
 
 ### Installing a Motherboard
 
@@ -385,7 +385,7 @@ If the motherboard has 24 lanes and you are using 2 PCIe x16 GPUs, the 32 lanes 
   - WiFi capability
 - **Riser Card** -> Special type of expansion card on a motherboard
   - A smaller pc may not fit a full graphics card so a Riser card moves the PCIe slots to be parallel to the motherboard
-    ![](/Riser.jpg)
+    ![](Riser.jpg)
 
 ## Cooling and Power
 
@@ -407,8 +407,8 @@ If the motherboard has 24 lanes and you are using 2 PCIe x16 GPUs, the 32 lanes 
 - **Open loop system** -> Liquid cooling based system of different components
 - **Water** and **liquids** are more effective coolants than air convection
 
-![](/water-cooled-diagram.jpg)
-![](/example-water-cooling.jpg)
+![](water-cooled-diagram.jpg)
+![](example-water-cooling.jpg)
 
 
 ### PSU (Power Supply Unit)
@@ -450,22 +450,22 @@ If the motherboard has 24 lanes and you are using 2 PCIe x16 GPUs, the 32 lanes 
 
 ## System Memory
 
-- Cache -> High-speed memory
+- **Cache** -> High-speed memory
 - RAM (Random Access Memory) / System Memory -> Temporary storage area/ non-persistent storage
-- Storage -> Mass storage device that holds more data but is slower than a cache. Permanent storage area/ persistent storage
-- Disk Cache -> Pulls the files from the disc into memory and replaces the old file
+- **Storage** -> Mass storage device that holds more data but is slower than a cache. Permanent storage area/ persistent storage
+- **Disk Cache** -> Pulls the files from the disc into memory and replaces the old file
 
 ### Addressing Memory -> Processor reaching the files inside RAM
 - **32-bit (x86)** -> 4 billion address location (4GB of data)
 - **64-bit (x64)** -> 184 quintillion address locations (16EB of data)
 
 ### Memory Modules
-- Single Bank -> Can put any size module in any slot
-- Paired Bank -> Requires installation of banks in pairs
+- **Single Bank** -> Can put any size module in any slot
+- **Paired Bank** -> Requires installation of banks in pairs
 - DIMM (Dual Inline Memory Modules)
 - DDR3, 4, 5 (Dual Data Rate)
 - RDRAM (Rambus Dynamic Random Access Memory)
-- Throughput -> Calculated based on the bus speed and the width of the databus
+- **Throughput** -> Calculated based on the bus speed and the width of the databus
 
 #### In historical order
 
@@ -489,7 +489,7 @@ If the motherboard has 24 lanes and you are using 2 PCIe x16 GPUs, the 32 lanes 
 
 - **A mix and match of middules is possible with the same type and different speeds** -> the faster module will slow itself to match speeds
 
-- SODIMM (Small outline Dual In-line Memory Module) -> Still classified as DDR4, DDR4, or DDR5
+- **SODIMM (Small outline Dual In-line Memory Module)** -> Still classified as DDR4, DDR4, or DDR5
   - SODIMM PC4-16000 (16GB/s)
   - Smaller form factor for laptops
 
@@ -504,9 +504,9 @@ Just because a motherboard has 4 slots doesn't mean it supports Quad-Channel.
 
 ### ECC (Error Correction Code) Memory
 
-- Non-Parity Memory -> Standard memory that does not check for errors and allows data to be put in or taken out
-- Parity Memory -> Performs basic error checking and ensures the memory contents are reliable
-- ECC (Error Correction Code) -> Detects and corrects an error
+- **Non-Parity Memory** -> Standard memory that does not check for errors and allows data to be put in or taken out
+- **Parity Memory** -> Performs basic error checking and ensures the memory contents are reliable
+- **ECC (Error Correction Code)** -> Detects and corrects an error
 - Buffered/Registered Memory -> Additional hardware (register) between memoru and CPU
 
 > Motherboard and Memory module have to support ECC to utilize it
@@ -523,37 +523,625 @@ Just because a motherboard has 4 slots doesn't mean it supports Quad-Channel.
 
 
 
+## BIOS (Basic Input/Output System) / UEFI (Unified Extensible Firmware Initiative)
+- **BIOS** -> Program that a computer's microprocessor uses to start and boot the computer system after being turned on (32-bit)
+- **Firmware** -> Software on a chip and contains BIOS program code in the flash memory of the motherboard
+- **UEFI** -> Supports 64-bit processors and provides a GUI (Graphical User Interface)
+
+### Boot Options
+- **POST (Power-On Self-Test)** -> Diagnostic testing sequence to check the computer's basic input/output system
+  - Variable beeps are used as a way to tell what is wrong with the system. Useful if video is not displaying.
+- **Read-Only Memory (ROM)** -> Type of chip embedded in the motherboard and can be upgraded through flashing
+- **UEFI** -> Updated form of BIOS that allows keyboard and mouse as input and provides a GUI
+  1. Supports 64-bit systems
+  2. Supports larger HDDs and SSDs (9.4 zettabytes ~ 9,4 x 10^21 bytes)
+  3. Supports the new GUID Partition Table (GPT) format (BIOS only supports MBR/Master Boot Record)
+  4. Faster boot-up
+  5. Uses a larger ROM size (better tools and commands)
+- **Flashing** -> Performed during upgrades, security fixes, or feature improvements
+  1. Back up the configuration and information
+  2. Use a USB flash drive to flash the firmware
+  3. The BIOS or UEFI will copy the firmware to the system and overwrite the old code
+
+### Security
+> BIOS and UEFI are two different types of firmware which are used during the loading and booting up of the OS.
+> A system will have a BIOS or UEFI but *not* both
+
+- Computers that rely on BIOS use the MBR (Master Boot Record) to hold the boot information
+- Computers that rely on UEFI use the GPT (GUID Partition Table) to hold the boot information
+- BIOS/UEFI Passwords
+  - Supervidor/Administrator/Setup Password -> Used to protect acces to the BIOS or UEFI configuration program and prevents access from unauthorized users
+  - User/System Password -> Used to lock access to the computer
+  - Storage/Hard Drive Password -> Password that locks access to a hard drive connected to the system and requires the end user's password
+- **Secure Boot** -> Enabled in the UEFI interface and settings and is not supported by a BIOS
+Boot Process
+![](boot-order.jpg)
+- Modern systems are configured to enable or disable the USB ports on the motherboard
+  - Disabling the ability of USB to read and write from mass storage device to stop malware being introduce
+
+> Remember -> When it comes to security, there are 3 main things the BIOS or UEFI can provide you with
+1. Set passwords
+2. Enable secure boot
+3. Restrict or disable USB ports
+
+### TPM (Trusted Platform Module) and HSM (Hardware Security Module)
+
+> First, Hardware RoT (Root of Trust) is the foundation of all secure operations of the computer system
+- **Hardware Root of Trust** -> Cryptographic module embedded in a computer system that endorses trusted execution and attests to boot settings and metrics
+> A hardware RoT is used to scan the boot metrics in the OS files to verify signatures and then use them to sign the report
+- **TPM (Trusted Plateform Module)** -> Specification for hardware-based storage of digital certificates, keys, hashed passwords, and other use and platform identification information
+  - TPM is a hardware RoT
+  - Secured boot-up
+  - Provides encryption
+- **HSM (Hardware Security Module)** -> Application for generating and storing cryptographic keys that is less susceptible to tampering and insider threats
+
+### Cooling Options 
+
+- **Quiet mode** -> Reduces the fan speed and allows higher temperatures to occur
+- **Balanced mode** -> Normal setting on most computers by default
+- **Cool mode** -> Able to run the fans harder and faster to create more air flow
+- **Fanless** -> No fans, obviously
+ 
+
+## Storage Devices
+
+### Types of Storage Device
+
+- **Internal Devices** -> Device that is placed inside the computer case or tower
+- **External Devices** -> Deviced that is placed outside the computer case or tower and connected to an external port
+- **2.5" and 3.5" Drive** -> Reserved for internal HDDs and SSDs
+- **5.25" Drive** -> Reserved for optical drives, backup tape drives, and floppy disc drives
+- **HDD (Hard Disk Drive)** -> Uses mechanical parts to read and write to a platter for persistent mass storage
+  - **5400 RPM** -> Slowest model (budget or low-end workstations and PCs)
+  - **7200 RPM** -> Faster Performance (modern computers)
+  - **10000 RPM** -> High-Performance drives (gaming PCs)
+  - **15000 RPM** -> Highest RPM and highest cost, but provides excellent performance
+  - **Buffer Size** -> Internal buffer or cache on a hard disc drive (8MB to 256 MB)
+  - Slower Speeds, Less expensive
+- **SSD (Solid State Drive)** -> Uses flash memory technology to implement persistent mass storage
+  - **2.5" SSD** -> Used when replacing an HDD inside of a laptop or small desktop
+  - **1.8" SSD** -> Used inside of small laptops
+  - **M.2 SSD** -> Like a memory chip, small, sleep and light to use in a laptop
+  - Higher Speeds, More expensive
+- **Hybrid Drive** -> 
+
+### Storage Device Connections
+
+- SATA 7-Pin Data Cable + 15-Pin Power Cable
+  - **SATA 1** -> Maximum speed of 1.5Gbps (150 MB/s of throughput)
+  - **SATA 2** -> Maximum speed of 3 Gbps (200 MB/s of throughput)
+  - **SATA 3** -> Maximum speed of 6 Gbps (600 MB/s of throughput)
+- **mSATA** -> Allows the SSD to be used as an adapter card that can be plugged into a combined data and power port on the motherboard
+- **NVMe** -> A communcation protocol used with the M2 form factor to plug directly into the motherboard
+- **PCIe** -> There are some SSDs which can connect to PCIe for faster speed than SATA but slower speeds than NVMe
+- **SCSI** -> Supports either 7 or 15 devices in a daisy chain
+  - **Narrow SCSI** -> 40 Mbps
+  - **Wide SCSI** -> 320 Mbps
+
+### RAID (Redundant Array of Independent Disks) -> Combination of multiple physical hard disks that is recognized by the operating system
+
+- RAID 0 (Striping)<br>
+![](RAID0.jpg)
+  - great for speed but provides no data redundancy
+  - no loss of space on the disks
+- RAID 1 (Mirror and Redundancy)<br>
+![](RAID1.jpg)
+  - provides **full redundancy**
+  - half the total storage
+- RAID 5 (Redundancy through Parity)<br>
+![](RAID5.jpg)
+  - Minimum 3 disks
+  - Any parity disk in space dedicated is number of disk parity
+- RAID 6 (Striping with Dual Parity 5+1)<br>
+![](RAID6.jpg)
+- RAID 10 (Mirroring + Striping)<br>
+![](RAID10.jpg)
+
+1. Failure Resistent -> Protection against the loss of erased data
+  - RAID 1
+  - RAID 5
+2. Fault Tolerant ->RAID can function even when a component fails
+  - RAID 1
+  - RAID 5
+  - RAID 6
+3. Disaster Tolerant -> RAID with two independent zones with full data access
+  - RAID 10
+
+### Removable Storage
+
+- **Hot-Swappable** -> Capable of being removed or replaced without disrupting or powering off the system
+  - USB
+  - Thunderbolt
+  - eSATA
+  - Safe to remove without losing the data
+- **AHCI (Advanced Host Controller Interface)** -> Technical standard developed by Intel that allows hot-swappable capability with SATA devices
+- **Drive Enclosure** -> Takes an internal hard drive and put in an enclosure
+- SD
+  - **Original** -> 25MB/s
+  - **UHS-1** -> 108 MB/s
+  - **UHS-2** -> 312 MB/s
+  - **UHS-3** -> 624 MB/s
+- MiniSD
+- MicroSD
+- CompactFlash
+- Memory Stick
+- Tape Drive
+  - **Standard Type** -> 140 GB
+  - **LTO Ultrium Tape** -> 3 TB
+- Floppy Drives
+  - 1.44 MB
+
+> Remember
+- A removable mass storage device is any device that can store data and can be carried
+- An external hard drive or SSD is the same type of device that is used inside the system
+
+### Optical Drive
+- **CD (Compact Disc)** -> Oldest form of optical drive that stores 74 to 80 minutes of music (650-700MB)
+  - **1x** -> 150 KB/s
+  - **2x** -> 300 KB/s
+  - ... 150x# KB/s
+  - **52x** -> 7800 
+- **DVD (Digital Versatile Disc)** -> Stores 4.7 GB or 8.4 GB DL (Dual Layer)
+  - **1x** -> 1.385 MB/s
+- **BD (Blue-ray Disc)** -> Stores 35GB or 50GB (DL)
+  - **1x** -> 4.5 MB/s
+- Read-only (ROM)
+  - CD-ROM, DVD-ROM, BD-ROM is a read-only disc
+- Write-once (R)
+  - CD-R, DVD-R, DVD+R and BD-R
+  - Writing that cannot be erased
+- Write-many/Erasable (RW/RAM/RE)
+  - **CD-RW** -> allows to write and erase the file to create a new one
+  - DVD-RW, DVD+RW, DVD-RAM
+  - **BD-RE** -> Has write-many type of disc called erasable disc
+
+> Remember
+- **CD** -> 650–700 MB
+- **DVD** -> 4.7 GB or 8.4 GB (DL)
+- **Blu-ray** -> 25 GB or 50 GB (DL)
+
+## Virualization -> Host computer installed with a hypervisor that can be used to install and manage multiple guest operating systems or virtual machines (VMs)
+
+- **Type 1 Hypervisor (Bare Metal)** -> Runs directly on the host hardware and functions as the operating system
+- **Type 2 Hypervisor (Hosted)** -> Runs withing the normal operating system
+![](Type1-Type2-Hypervisor.jpg)
+
+- **Terminal Services** -> Server-based solution that runs the application on servers in a centralized location
+- **Application Streaming** -> Client-based solution that allows an application to be packaged up and streamed directly to a user's PC.
+- **VDI (Virtual Desktop Infrastructure)** -> hosts desktop OSs within a virtualized environment hosted by a centralized server or server farm
+- **Sandbox** -> An isolated environment for analyzing pieces of malware
+- **Cross-Platform Virtualization** -> Allows for the testing and running of software applications for different operating systems
+- **Emulation** -> System imitation (different processor than available with host)
+- **Virtualization** -> New "physical" machine (limited to our processor)
+
+### Containerization -> Type of virtualization applied by a host operating system to provision an isolated execution environment for an application
+
+![](containerization.jpg)
+
+1. When a physical server crashes, all the organizations hosted on that same server are affected
+2. An organization's failure to secure the virtual environments hosted on a shared server poses a security risk for the other organization
+
+### Resource Requirements
+
+- **Virtualization** -> Pretend there are other computers inside itself
+  - VT-x (Intel)
+  - AMD-V (AMD)
+  - **SLAT (Second Level Address Translation)** -> Improves the performance of virtual memory when running multiple virtual machines on a single physical host (faster virtualization of RAM)
+    - **Intel** -> EPT (Extended Page Table)
+    - **AMD** -> RVI (RApid Virtualization Indexing)
+
+- **System Memory** -> Amount of physical memory installed on a physical server
+
+### Security Requirements
+
+- **VM Escape** -> Threat attempts to get out of an isolated VM and send commands to the underlying hypervisor
+- **VM Hopping** -> Threat attempts to move from one VM to another on the same host
+- **Sandbox** -> Separates running processes and programs to mitigate system failures or software vulnerabilities
+- **Sandbox Escape** -> Occurs when an attacker circumvents sandbox protections to gain access to the protected OS or other privileged processes
+- **Live migrations** -> Migrates the virtual machine from one host to another over the network
+  - Only do this on a trusted network or encrypted connection.
+- **Data Remnants** -> Leftover pieces of data that may exist in the hard drive which are no longer needed
+  - Encrypt virtual machine storage location
+  - Destroy encryption key when no longer needed
+- **VM Sprawl** -> Uncontrolled deployment of virtual machines
+
+## Cloud Computing
+
+### Charcteristics of the Clou
+
+- **High Availability** -> Services experience very little downtime when using the cloud
+  - Availability is the percentage of uptime versus downtime
+  - 99.999% uptime (5 minutes and 15 seconds of downtime in a year)
+- **Vertical Scaling (Scaling Up)** -> Increasing the power of existing resources in the working environment
+- **Horizontal Scaling (Scaling Out)** -> Adding additional resources to help handle the extra load being experienced
+- **Rapid Elasticity** -> Ability to quickly scale up or down
+  - Elasticity is the system's ability to handle changes to demand in real time
+- **Metered Utilization** -> Being charged for a service on a pay per use basis
+- **Shared Resources** -> Ability to minimize the costs by putting VMs on other servers
+- **File Synchronization** -> Ability to store data which can then spread to other places depending on configuration
+
+### Cloud Deployment Models
+
+1. Public -> Systems and users interact with devices on public networks, such as the Internet and other clouds
+2. Private -> Systems and users only have access with other devices inside the same private cloud or system
+3. Hybrid -> Combination of private and public clouds
+- **Community** -> Collaborative effort where infrastructure is shared between several different organizations with common service needs
+- **Multitenancy** -> Allows customers to share computing resources in a public or private cloud
+- **Single-Tenancy** -> Assigns a particular resource to a single organization
+
+### Cloud Service Models
+
+- **On-Premise Solution** -> Needs to procure hardware, software, and personnel necessary to run the organization's cloud
+- **Hosted Solution** -> Third-party service provider that provides all the hardware and facilities needed to maintain a cloud solution
+  - AWS, Google Cloud, Linode Akamai, ...<br>
+- SaaS (Software as a Service)
+  - Google Docs, Office 365, Gmail, turbotax, ...<br>
+![](SaaS.jpg)
+- PaaS (Platform as a Service)
+  - Not giving code/application. <br>
+![](PaaS.jpg)
+- IaaS (Infrastructure as a Service)<br>
+![](IaaS.jpg)
+![](aaS.jpg)
+
+> Hint: If you see something that is More than IaaS or less than SaaS then choose PaaS since the lines for it are unclear
+
+> Remember
+- **IaaS** -> Provides everything you need to run a server (sometimes will let you choose OS)
+- **PaaS** -> OS and Infrastructure like Apache Webserver, MySQL Database which you develop on top of
+
+### VDI (Virtual Desktop Infrastructure) -> Hosts desktop OSs within a virtualized environment hosted by a centralized server or server farm
+
+- **Centralized Model** -> hosts all the desktop instances on a single server or server farm
+- Hosted Model/ Desktop as a Service (DAAS) -> Maintained by a service provider and provided to the end user as a service
+- **Remote Virtual Desktop Model** -> Copies the desktop image to a local machine prior to being used by the end user
+
+### Cloud Storage Services
+
+- **Cloud Storage Applications** -> Amount of space on a cloud-based server as file storage
+  - Dropbox
+  - Google Drive
+  - OneDrive
+- **File Syncronization** -> Ability to synchronize from different devices using a single account
+- **CDN (Content Delivery Network)** -> Network of servers that locates the nearest server to minimize delay or download time
+
+### SDN (Software-Defined Networking) -> Enables the network to be intelligently and centrally controlled, or programmed, using software applications
+
+- **Application Layer** -> Focuses on the communication resource requests or information about the network as a whole
+- **Control Layer** -> Uses the information from the applications and decides how to route a data packet on the network
+- **Infrastructure Layer** -> Contains the network devices that receive information about where to move the data
+- **Management Plane** -> Used to monitor traffic conditions and the status of the network
+
+> Remember: That Software-Defined Networking can be broken down into four layers
+1. the Application Layer
+2. The control Layer
+3. The Infrastructure Layer
+4. Management Plane
+
+## Networking Basics
+
+### Networking Hardware
+![](networkHardware.jpg)
+
+- **NIC (Network Interface Card)** -> Provides an ethernet connection to the network
+- **HUB** -> Has a number of different ports between 4 and 48 ports (Broadcast Collision Domain)
+  1. Collision
+  2. Uncover ears and listen to traffic
+- **Switch** -> Smart hubs that remember the ports that are connected to them
+  - Switched can have multiple people talking at one time
+  - **Unmanaged Switch** -> Performs its functions without requiring a configuration
+  - **Managed Switch** -> Performs its functions with configuration
+- **Wireless Access Point** -> Device that allows wireless devices to connect to a wired network
+- **Router** -> Used to connect different networks together
+- **Firewall** -> Scans and blocks traffic that enters or leaves a network
+  - **UTM (Unified Threat Management)** -> contains firewall features
+- **Patch Panel** -> Device that allows cable network  jacks from a wall into a central area
+- **PoE (Power over Ethernet)** -> Supplies electrical power from a switch port over an ordinary data cable to a power device
+  - **802.3af** -> Allows the least amount of power to be drawn (13W)
+  - 802.3at (PoE+) -> Allows power devices to draw up to 25W
+  - 802.3bt (PoE++) -> Used to supploy power of up to 51W (Type 3) or 73W (Type 4)
+  1. Switch that supports PoE at one of the three levels
+  2. Proper cabling in place for support (Cat 6 or above)
+  3. Power device to use the data and power coming from the ethernet cable
+  - Power injector plugs into wall outlet and can take an ethernet cable from a switch that doesn't support PoE and supply the power into the cable<br>
+![](Power-Injector.jpg)
+- **Cable Modem** -> Device that translates coaxial cable signals into radio frequency waves
+- **DSL (Digital Subscriber Line) Modem** -> Device that translates coaxial cable signals into phone lines
+- **ONT (Optical Network Terminal)** -> Terminates fiber connection
+- **SDN (Software Defined Networking)** -> Way of virtualizing the network hardware
+
+### Network Types
+
+- **PAN (Personal Area Network)** -> Smallest type of wired or wireless network and covers the least amount of area
+- **LAN (Local Area Network)** -> Connects components within a limited distance (~300 feet)
+  - **Ethernet** -> IEEE 802.3
+  - **Wi-Fi** -> IEEE 802.11
+- **CAN (Campus Area Network)** -> Connects LANs that are building-centric across a university, industrial park, or business place (~few miles)
+- **MAN (Metropolitan Area Network)** -> Connects scattered locations across a city or metro area (~25 miles)
+- **WAN (Wide Area Network)** -> Connects geographically disparate internal networks and consists of lease lines or VPNs (Worldwide coverage)
+![](AreaNetworks.jpg)
+- **WLAN (Wireless Local Area Network)** -> A wireless distribution method for two or more devices that creates a local area network using wireless frequencies
+- **SAN (Storage Area Network)** -> Provisions access to configurable pools of storage devices that can be used by application servers
+  - iSCSI (Interet SCSI)
+  - FC (Fiber Channel)
+- SoHo (Small Office, Home Office) LAN -> Uses a centralized server or simply provides clients access to local devices like printers, file storage, or the Internet
+
+### IoT (Internet of Things)
+> A global network of appliances and personal devices that have been equipped with sensors, software, and network connectivity to report state and configuration
+
+1. Hub and control systems
+2. Smart devices
+3. Wearables
+4. Sensors
+
+### Twisted Pair Cables
+
+- UTP (Unshielded Twisted Pair)
+- STP (Shielded Twisted Pair)
+- Connectors
+  - **RJ (Registered Jack)** -> Carries voice or data which specifies the standard a device needs to meet in order to connect to the phone or data network<br>
+![](RJ-connectors.jpg)
+- **Bandwidth** -> The theoretical measure of how much data could be transferred from a source to its destination
+- **Throughput** -> The actual measure of how much data is successfully tranferred from a source to its destination
+> ***You need to know these***
+- **Ethernet Standard** -> A designation given to a particular catefory that provides the ability to understand the bandwidth and the cable type to be used<br>
+![](cat5-Standards.jpg)
+![](cat5e-Standard.jpg)
+![](cat6-Standard.jpg)
+![](cat6a-Standard.jpg)
+![](cat7-Standard.jpg)
+![](cat8-Standard.jpg)
+> **All together so you remember. Here is a summarized chart to memorize**
+![](CableStandards.jpg)
+![](example-cable-standard-question.jpg)
+> Yes, the maximum cable length is a 100 meters, but that's often the maximum, not the minimum. Oftentimes in the real world, you're going to see that you can't get a full a 100 meters in cable length from these type of cables because there's interference from fluorescent lights and other sources of EMI.
+- **Straight-Through Cable (Patch Cable)** -> Contains the exact same pinouts on both ends of the cable
+- **568B Standard** -> Preferred when wiring jacks inside building
+- **Crossover Cable** -> Swaps the send and receive pins on the other end of the cable when the connector andits pinout are created<br>
+![](crossover.jpg)
+> **For the exam**, a switch to a switch connection requires a crossover cable
+- **MDIX (Medium Dependent Interface Crossover)** -> An automated way to electronically simulate using a crossover cable
+  - If a switch doesn't suppor MDIX then you have to use a crossover cable
+> Remember the colors for 568A and 568B standards
+![](color-code.jpg)
+
+- **Direct Burial** -> a cable rating that specifies that a cable has a stronger sheathing and jacket that can withstand more extreme weather conditions
+- **Plenum Cable** -> A speial coating put on a UTP or STP cable that provides a fire-retardant chemical layer to the outer insulating jacket
+  - for ceilings, walls, raised floors, or air ducts
+
+### Fiber Optic Cabling -> Uses light from an LED or laser to transmit information through a thin glass fiber
+  - Greater usable range
+  - Greater data capacity
+  - Switches, routers, and end-user devices can become a limitation
+  - Expensive (5-10x more than copper cabling)
+  - Difficult to work with
+  - SMF (Single Mode Fiber) -> Used for longer distances and has smaller core size which allows for only a single mode of travel for the light signal
+  - MMF (Multimode Fiber) -> Used for shorter distances and has larfer core size which allows for multiple modes of travel for the light signal
+
+> Remember <br>
+![](MMF-SMF.jpg)
+> - **Yellow** -> SMF
+> - **Aqua** -> MMF
+> - **SC (Subscriber Connector)** -> Stick Click<br>
+![](SC.jpg)
+> - **ST (Straight Tip Connector)** -> Stick and Twist<br>
+![](ST.jpg)
+> - **LC (Lucent Connector)** -> Love Connector<br>
+![](LC.jpg)
+> - **MTRJ (Mechanical Transfer Register Jack)**<br>
+![](MTRJ.jpg)
+
+### Coaxial Cabling -> One of the oldest categories of copper media that is still used in networking today
+![](coaxial-cable.jpg)
+
+- RG-6 and RG-59<br>
+![](RG.jpg)
+
+- Connectors
+  - F-type (most common)
+  - BNC (older)<br>
+  ![](BNC-F.jpg)
+
+- Twinaxial -> Similar to coaxial cable but uses two inner conductors to carry the data instead of just one
+
+### RJ45 Cable Standard -> 1, 2, 3, 6
+![](color-code.jpg)
+> Don't go over 100 meters
+
+## Wireless Networks
+
+### Wireless Frequencies
+- DSSS (Direct-Sequence Spread Spectrum) -> Modulates data over an entire range of frequencies using a series of signals known as chips
+- FHSS (Frequency-Hopping Spread Spectrum) -> Allows devices to hop between predetermined frequencies
+- OFDM (Orthogonal Frequency Division Multiplexing) -> Uses a slow modulation rate with simultaneous transmissions over 52 different data streams
+
+> You really only need to recognize that these three words are referring to something in the wireless networking world.
+Each band has specific frequencies/channels to avoid overlapping with other frequencies
+- Channel -> A virtual medium through which wireless networks can send and recieve data
+- 2.4 GHz
+  - 11 Channels (United States) -> 2401-2473MHZ
+  - 13 (Rest of the world) -> 2401-2483MHz
+  - 14 (Japan) -> 2401-2495 MHz
+  > **1, 6, and 11** avoid overlapping frequencies in the **2.4** GHz band
+- 5 GHz
+
+> remember
+> - The standard charnnel size for both 2.4 and 5 GHz networks is 20 MHz
+> - On a 5GHz network, you are able to bond channels to be 2x, 4x, 8x. This increases network speeds but increases chance of conflicting frequencies
+
+### Wireless Standards
+> Need to know the Standard, Band, and Bandwidth
+![](wifi-standard.jpg)
+- MIMO (Multiple-Input and Multiple-Output) -> Uses multiple antennas to send and receive data than it could with a single antenna
+- MU-MIMO (Multiple User Multiple-Input and Multiple-Output) -> Allows multiple users to access the wireless network and access point at the same time
+- RFI (Radio Frequency Interference) -> Occurs when there are similar frequencies to wireless networks in the area
+ 
+### Wireless Security
+- Pre-Shared Key -> Both the access point and the client use the same encryption key
+- WEP (Wired Equivalent Privacy) -> Original 802.11 wireless security standard which is an insecure security protocol
+  - Uses a 24-bit Initialization Vector (IV) sent in clear text
+- WPA (Wi-Fi Protected Access) -> Replaced WEP and follows the TKIP (Temporal Key Integrity Protocol)
+  - WPA uses 48-bit Initialization IV instead of 24_bit
+  - RC4 (Rivest Cipher 4) -> For encryption
+  - MIC (Message Integrity Check) -> To confirm data was not modified in transit
+  - Enterprise Mode -> To authenticate users before exchangin keys
+  - Considered Weak
+- WPA2 (wi-Fi Protected Access 2) -> Created as part of IEEE 802.11i standard and requires stronger encryption and integrity checking through CCMP
+  - CCMP should remind you of WPA2
+  - Replaces RC4 with AES
+  - AES (Advanced Encryption Standard) -> To provide additional security by using a 128-bit key or higher
+  - Personal Mode -> Pre-shared key
+  - Enterprise Mode -> Centralized authentication
+
+> Remember
+![](wifi-security.jpg)
+- MAC Address Filtering -> configures an access point with a listing of permitted (whitelisted) or denied (blacklisted) MAC addresses (like an ACL)
+- Disabling SSID Broadcast -> Configures an access point not to broadcast the name of the wireless LAN
+### Fixed Wireless
+
+1. Wi-Fi (802.11) -> When it comes to fixed wireless, creates point to point connections from one building to another over a relatively short distance
+  - Usually using directional antennas
+2. Cellular -> Uses a larger antenna and a larger hotspot powered by a power outlet within an office or home
+3. Microwave -> Creates point to point connection between two or more buildings that have longer distances
+  - 40 miles
+4. Satellite -> A long range and fixed wireless solution that can go for miles
+  - Low Earth Orbit -> Requires more satellites to cover the entire planet but give lower latency speed
+  - Geosynchronous Orbit -> One satellite can cover a large portion of the Earth; higher latency and lower quality.
+
+### NFC, RFID, IR, and Bluetooth
+
+- NFC (Near Field Communication) -> Uses radio frequency to send electromagnetic charge containing the transaction data over a short distance
+- RFID (Radio Frequency Identification) -> A form of radio frequency transmission modified for use in authentication systems
+- IrDA (Infrared Data) -> Allows two devices to communicate using line of sight communication in the infrared spectrum
+- Bluetooth -> Creates a personal area network over 2.4GHz to allow for wireless connectivity
+  - Bluejacking -> Sending unsolicited messages to a bluetooth device
+  - Bluesnarfing -> Making unauthorized access to a device via Bluetooth connection
+  - BlueBorne -> Allows the attacker to gain complete control over a device without even being connected to the target device
+- Tethering -> Sharing cellular data internet connection from a smartphone to multiple other devices
+
+### Configure a Wireless Network
+
+- Use WPA2 with a good, long, strong pre-shared key
+- Disable SSID broadcast
+- Enable Wireless Isolation
+- Enable MAC filtering
+- Disable WPS setting
+
+## Internet connection
+
+- ISP (Internet Service Provider) -> Establishes high speed links between their network and clients
+
+### Dial-up and DSL
+
+- POTS (Plain Old Telephone System) -> Runs as a dial-up connection and is used on the public switched telephone network (PSTN)
+  - Dial-up modems have a maximum bandwisth of 53.3 kb/s
+- Legacy System -> Old system that is still used in some critical functions
+- ISDN (Integrated Service Digital Network) -> Supports multiple 64 Kbps channels
+- DSL (Digital Subscriber Line)
+  - ADSL (Asymetric DSL) -> Has different speeds of download and upload
+    - Maximum Distance to DSLAM -> 18,000 ft.
+    - Maximum Download Speed -> 8 Mbps
+    - Maximum Upload Speed -> 1.544 Mbps
+  - SDSL (Symetric DSL) -> Has same speeds of download and upload
+  - VDSL (Very High Bit-Rate DSL) -> Has high speeds of download and upload
+    - Maximum Distance to DSLAM -> 4,000 ft.
+    - Download Speed -> 50 Mbps or more
+    - Upload Speed -> 10 Mbps or more
+
+### Cable Connections
+
+- Cable Modems -> Used a cable TV network that is made up of a hybrid fiber-coaxial (HFC)  distribution network
+- DOCSIS (Data-Over-Cable Service Interface Specifications) -> Specific frequency ranges used for upstream and downstream transmissions
+> remember that something pertaining to HFC or DOCSIS is referring to something to do with cable modems
+
+### Fiber Connections
+
+- FTTC (Fiber To The Curb) -> Runs a fiber optic cable from an internet provider access point to a curb
+- FTTP (Fiber To The Premises) -> Fiber optic that connects directly to a building and connects to an optical network terminal (ONT)
+- ONT (Optical Network Terminal) -> Physical devices that convert optical signals to electrical signals
+
+### Cellular Connections
+
+The G refers to the generation of cellular technology being used
+
+- 3G
+  - WCDMA (Wideband Code Division Multiple Access) -> Used by the UTS standard and could reach data speeds of up to 2 Mbps
+  - HSPA (High Speed Packet Access) -> Reaches speeds of up to 14.4 Mbps and is sometimes referred to as 3.5G
+  - HSPA+ (High Speed Packet Access Evolution) -> Reaches speeds of up to 50 Mbps and is sometimes referred to as 3.75G
+- 4G LTE (Long-term Evolution)
+  - LTE-A (LTE Advanced)
+![](cellular-generations.jpg)
+> You do NOT need to memorize the speeds and frequencies for each. Know that
+> - The higher the G, the newer the standard, and the more increased the speeds are
+> - Also, 5G comes in 3 different bands: Low-band, Mid-band, and High-band. Up in band is faster speeds but decreased coverage. 
+
+### WISP Connections
+
+- Microwave -> Uses a beam of radio waves in the microwave frequency range to transmit information between two fixed locations
 
 
+### Satellite Connections
 
+- Satellite -> A method of using communication satellites located in space to connect a user to the internet
+  - Slow
+  - Expensive
+   
 
+## Network Configurations
 
+### TCP/IP Model
 
+- Application Layer -> Contains all the protocols that perform higher-level functions
+- Transport Layer -> Shows how to send the packets
+  - TCP (Transmission Control Protocol)
+  - UDP (User Datagram Protocol)
+- Internet Layer -> used to address packets and route them across the network
+- Link/network Interface Layer -. responsible for putting frames in the physical network's transmission data
+  - Can only travel through the local area network<br>
 
+![](TCP-IP-Model.jpg)
 
+### IPv4
 
+![](IP-ranges.jpg)
+- Multicast Address -> A logical identifier for a group of host in a computer network
+- Classful Mask -> Defaul subnet mask for a given class of IP addresses
+- Classless Inter-Domain Routed -> Allows for borrowing some of the host bits and reassigning them to the network portion
+- Private Address<br>
+![](private.jpg)
+- Loopback Address (127.0.0.1)
+- APIPA (Automatic Private IP Addresses) -> Used when a device does not have a static address or cannot reach a DHCP server
+  - 169.254.0.0 – 169.254.255.255
+- DORA (Discover, Offer, Request, Acknowledge) -> Try to get IP; if can't, give APIPA Address
 
+### Assigning IPv4 Addresses
 
+- Static Assignment -> Manually type the IP address for the host, its subnet mask, default gateway, and DNS server
+- Dynamic Assignment -> Dynamic allocation of IP addresses
+- DNS (Domain Name System) -> converts the domain names used by a website to the IP address of its server
+- WINS (Windows Internet Name Service) -> Identifies NetBIOS systems on a TCP/IP network and converts those NetBIOS names to IP addresses
+- BOOTP (Bootstrap Protocol) -> Dynamically assigns IP addresses and allows a workstation to load a copy of boot image to the network
+- DHCP (Dynamic Host Control Protocol) -> Assigns an IP based on an assignable scope or addresses and provides the ability to configure other options
+- 
 
+### DHCP
+Provides an IP address to every machine on the network and eliminates configuration errors
 
+- Scope -> list of valid IP addresses available for assignment or lease to a client computer or endpoint device on a given subnet
+- DHCP Reservation -> Excludes some IP addresses from being handed to devices unless they meet a certain condition
 
+### DNS
+> Remember
+![](DNS-record.jpg)
 
+### VLAN
 
+### VPN
 
+### IPv6
 
+### Ports and Protocols
 
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-### Ports and Standards
 | Port   | Name | Service Description |
 |-|-|-|
 | 20, 21 | File Tansfer Protocol (FTP) | Transfers files |
@@ -603,6 +1191,17 @@ Ports Continued in lesson, may be less likely to remember
 | 802.3 | Ethernet  |
 | 802.11    | WiFi  |
 | 802.1x    |   |
+
+### TCP versus UDP
+
+
+
+
+
+
+
+
+
 
 ## CompTIA 7-Step Malware Removal Process
 
